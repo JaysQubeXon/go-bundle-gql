@@ -1,10 +1,6 @@
-## bindata
+## go-bundle-gql
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-bindata/bindata)](https://goreportcard.com/report/github.com/go-bindata/bindata)
-
-This package converts any file into managable Go source code. Useful for
-embedding binary data into a go program. The file data is optionally gzip
-compressed before being converted to a raw byte slice.
+This package bundles your `.graphql` schema files into a singular file and compiles a `.go` file for easy integration within your project.
 
 It comes with a command line tool in the `go-bindata` sub directory.
 This tool offers a set of command line options, used to customize the
@@ -15,13 +11,13 @@ output being generated.
 
 To install the library and command line program, use the following:
 
-	go get -u github.com/go-bindata/go-bindata/...
+	go get -u github.com/JaysQubeXon/go-bundle-gql/...
 
 
 ### Usage
 
-Conversion is done on one or more sets of files. They are all embedded in a new
-Go source file, along with a table of contents and an `Asset` function,
+Conversion is done on one or more sets of graphql files. They are all embedded in a new
+`.graphql` file and an extra `.go` file, along with a table of contents and an `Asset` function,
 which allows quick access to the asset, based on its name.
 
 The simplest invocation generates a `bindata.go` file in the current
